@@ -21,20 +21,20 @@
       *{box-sizing:border-box}
       html,body{margin:0;height:100%;background:var(--bg);color:var(--txt);font-family:var(--font-ui);}
       .app{height:100%;display:grid;grid-template-rows:auto 1fr auto}
-      .top{position:sticky;top:0;z-index:5;background:rgba(6,16,24,.6);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px}
-      .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+      .top{position:sticky;top:0;z-index:5;background:rgba(6,16,24,.6);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:6px}
+      .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
       .stack{display:flex;flex-direction:column;gap:6px}
       .meta{display:flex;gap:8px;flex-wrap:wrap}
-      .title{font-family:var(--font-display);font-size:var(--t-34);letter-spacing:0.02em;font-variation-settings:"wght" 850}
-      .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,229,255,.35);border-radius:999px;padding:8px 12px;background:rgba(0,229,255,.12)}
-      .controls{display:flex;gap:10px;flex-wrap:wrap}
-      label{display:flex;align-items:center;gap:8px;font-size:var(--t-16);color:#C9D0E5}
-      input,select{background:#0d1724;color:var(--txt);border:1px solid #2a2e39;border-radius:10px;height:40px;padding:8px 12px;font-size:var(--t-16);}
+      .title{font-family:var(--font-display);font-size:var(--t-23);letter-spacing:0.02em;font-variation-settings:"wght" 850}
+      .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(0,229,255,.35);border-radius:999px;padding:4px 8px;background:rgba(0,229,255,.12);font-size:12px}
+      .controls{display:flex;gap:6px;flex-wrap:wrap}
+      label{display:flex;align-items:center;gap:6px;font-size:12px;color:#C9D0E5}
+      input,select{background:#0d1724;color:var(--txt);border:1px solid #2a2e39;border-radius:8px;height:28px;padding:4px 8px;font-size:14px;}
       input[type=number].num{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-feature-settings:"zero" 1;}
       select{font-family:var(--font-ui)}
       button{cursor:pointer;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
       .btn{display:inline-block;padding:10px 16px;border-radius:10px;border:none;font-size:var(--t-23)}
-      .btn-compact{padding:4px 10px;font-size:var(--t-16);border-radius:8px}
+      .btn-compact{padding:3px 8px;font-size:12px;border-radius:6px}
       /* Narrow numeric widths */
       .w-3ch{width:3ch}
       .w-4ch{width:4ch}
@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="controls">
-             <label>Bahis <input id="bet" class="num w-6ch" type="number" value="10" min="1" step="1"></label>
+             <label>Bahis <input id="bet" class="num" type="number" value="10" min="1" step="1" style="width:64px"></label>
             <label>Risk
               <select id="risk">
                 <option value="low">Low</option>
@@ -80,8 +80,8 @@
                 <option value="high">High</option>
               </select>
             </label>
-             <label>Satır <input id="rows" class="num w-4ch" type="number" value="12" min="8" max="16" step="1"></label>
-             <label>Top <input id="balls" class="num w-4ch" type="number" value="5" min="1" max="50" step="1"></label>
+             <label>Satır <input id="rows" class="num" type="number" value="12" min="8" max="16" step="1" style="width:52px"></label>
+             <label>Top <input id="balls" class="num" type="number" value="5" min="1" max="50" step="1" style="width:52px"></label>
              <button id="drop" class="btn btn-primary btn-compact">DROP!</button>
              <button id="auto" class="btn btn-secondary btn-compact">AUTO: Kapalı</button>
           </div>
@@ -458,5 +458,3 @@
     </script>
   </body>
   </html>
-
-
